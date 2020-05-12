@@ -1,4 +1,5 @@
 kubectl apply -f webserver-deployment.yml
 kubectl get deployments
 kubectl get pods
-
+kubectl expose deployment webserver-deployment --type=LoadBalancer --port=80
+minikube service webserver-deployment --url
